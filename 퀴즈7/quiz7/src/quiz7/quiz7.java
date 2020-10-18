@@ -9,7 +9,6 @@ public class quiz7 {
 	private Scanner scanner = new Scanner(System.in);
 	
 	public quiz7() {
-		// store에 9 개의 아이템을 입력하여 초기화
 		store.put("멕시코", "멕시코시티");
 		store.put("스페인", "리스본");
 		store.put("프랑스", "파리");
@@ -62,21 +61,20 @@ public class quiz7 {
 	}
 
 	private void quiz() {
-		// 모든 키(나라)를 알아낸다.
+		
 		Set<String> keys = store.keySet();
 		Object [] array = (keys.toArray());
 		while(true) {
-			// 나라 중에서 하나를 선택한다.
-			int index = (int)(Math.random()*array.length); // 랜덤한 위치 결정
+			
+			int index = (int)(Math.random()*array.length); 
 			
 			
 			String question = (String)array[index];
 			String answer = store.get(question);
 			
-			// 문제를 출력한다.
 			System.out.print(question + "의 수도는? ");
 			
-			String capitalFromUser = scanner.next(); // 사용자의 입력
+			String capitalFromUser = scanner.next(); 
 			if(capitalFromUser.equals("그만")) {
 				break;
 			}
